@@ -1,0 +1,32 @@
+{
+  "name": "newtoursuiautomation",
+  "version": "1.0.0",
+  "description": "automation",
+  "main": "index.js",
+  "scripts": {
+    "test": "protractor ./conf.js",
+    "webdriver": "webdriver-manager update"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rdonthagani/newtoursUIAutomation.git"
+  },
+  "author": "rajashekar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rdonthagani/newtoursUIAutomation/issues"
+  },
+  "homepage": "https://github.com/rdonthagani/newtoursUIAutomation#readme",
+  "dependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/register": "^7.10.1",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-async-to-generator": "6.24.1",
+    "babel-plugin-transform-runtime": "6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "cucumber": "^6.0.5",
+    "protractor": "^7.0.0",
+    "protractor-cucumber-framework": "^6.2.1"
+  }
+}
