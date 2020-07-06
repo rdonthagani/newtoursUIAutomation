@@ -1,0 +1,20 @@
+{
+  "RegistrationDetails": {
+    "emailID": "user@gmail.com",
+    "accountFirstName": "user",
+    "accountLastName": "userDemo",
+    "accountPWD": "user123",
+    "days": 10,
+    "month": "June",
+    "year": 1990,
+    "firstName": "demo",
+    "lastName": "user",
+    "adresses": "9455 valley ranch",
+    "city": "irving",
+    "state": "Texas",
+    "postcode": 75063,
+    "country": "United States",
+    "mobileNumber": 4442304322
+
+  }
+}

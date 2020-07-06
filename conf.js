@@ -18,7 +18,7 @@ exports.config = {
 //cucumber options
 
   cucumberOpts: {
-    require:['./src/support/*.js'],
+    require:['./src/stepDefinations/*.js','./src/support/*.js'],
     strict: true,
     keepAlive: false,
 
@@ -33,13 +33,13 @@ exports.config = {
   // Framework to use. custom is recommended.
   framework: "custom",
   frameworkPath: require.resolve('protractor-cucumber-framework'),
-  baseUrl: 'http://newtours.demoaut.com/',
+  baseUrl: 'http://automationpractice.com/index.php',
   allScriptsTimeout: 110000,
   getPageTimeout: 60000,
 
   // Spec patterns are relative to the current working directory when
   // protractor is called.
-  //specs: ['example_spec.js'],
+  //specs: ['example
   suites: {regression:['./features']
   },
 
