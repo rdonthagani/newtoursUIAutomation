@@ -1,0 +1,133 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "End to  End e-commerce application testing",
+    "line": 1,
+    "id": "end-to--end-e-commerce-application-testing",
+    "tags": [],
+    "uri": "features\\regression\\endToEndscenario.feature",
+    "elements": [
+      {
+        "id": "end-to--end-e-commerce-application-testing;user-registration",
+        "keyword": "Scenario",
+        "line": 2,
+        "name": "user registration",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 3,
+            "name": "user will on e-commerce application",
+            "match": {
+              "location": "src\\stepDefinations\\registrationSteps.js:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 4,
+            "name": "user will register",
+            "match": {
+              "location": "src\\stepDefinations\\registrationSteps.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7262000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "by providing user details",
+            "match": {
+              "location": "src\\stepDefinations\\registrationSteps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 53379000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "user will be on his account",
+            "match": {
+              "location": "src\\stepDefinations\\shoppingSteps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "user start shopping items",
+            "match": {
+              "location": "src\\stepDefinations\\shoppingSteps.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "user will add shopped items to cart",
+            "match": {
+              "location": "src\\stepDefinations\\shoppingSteps.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "src\\support\\hooks.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      }
+    ],
+    "metadata": {
+      "browser": {
+        "name": "chrome",
+        "version": "83.0.4103.116"
+      },
+      "device": "",
+      "platform": {
+        "name": "",
+        "version": ""
+      }
+    }
+  }
+]

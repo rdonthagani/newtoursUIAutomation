@@ -21,8 +21,7 @@ exports.config = {
     require:['./src/stepDefinations/*.js','./src/support/*.js'],
     strict: true,
     keepAlive: false,
-
-
+    format:'json:Documents/Reports/results.json'
   },
   onPrepare:function(){
 
@@ -40,11 +39,21 @@ exports.config = {
   // Spec patterns are relative to the current working directory when
   // protractor is called.
   //specs: ['example
-  suites: {regression:['./features']
+  suites: {
+    regression:['./features/regression/endToEndscenario.feature']
   },
 
-  // Options to be passed to Jasmine.
-  jasmineNodeOpts: {
-    defaultTimeoutInterval: 30000
-  }
+  // reporting plugins
+  plugins:[{
+    package: 'protractor-multiple-cucumber-html-reporter-plugin',
+    options: {
+      automaticallyGenerateReport: true,
+      displayDuration: true,
+      durationInMS: true
+    }
+
+  }]
+
+
+
 };
