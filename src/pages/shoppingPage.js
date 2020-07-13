@@ -7,8 +7,8 @@ class ShoppingPage{
     constructor() {
 
     this.tshirts =element(by.xpath("//*[@id='block_top_menu']/ul/li[3]/a"));
-    this.selectedItem=element(by.xpath("//img[@title='Faded Short Sleeve T-shirts']"));
-
+    this.mouseMoveToselectedItem=element(by.xpath("//img[@title='Faded Short Sleeve T-shirts']"));
+    this.selectedItem=element(by.xpath("//span[text()='More']"));
     this.selectSize=element(by.xpath("//select[@id='group_1']"));
     this.size=element(by.xpath("//option[text()='M']"));
     this.color=element(by.xpath("//a[@name='Blue']"));
@@ -19,12 +19,15 @@ class ShoppingPage{
     this.proceedTocheckoutfourth=element(by.xpath("//button[@name='processCarrier']"));
     this.payType=element(by.xpath("//a[@class='bankwire']"));
     this.confirmOrder=element(by.xpath("//span[text()='I confirm my order']"));
+    this.logOut=element(by.xpath("//a[@title='Log me out']"));
+
         }
     async shoppingTshirt(){
 
         await elementHelper.eleClick(this.tshirts)
-        await elementHelper.eleClick(this.selectedItem)
-        await elementHelper.waitForElement(timeOuts.Duration.longDuration)
+       // await elementHelper.eleClick(this.selectedItem)
+        await elementHelper.mouseMoveElement(this.mouseMoveToselectedItem)
+        await elementHelper.mouseMoveElementClick(this.selectedItem)
         await elementHelper.eleClick(this.selectSize)
         await elementHelper.eleClick(this.size)
         await elementHelper.eleClick(this.color)
@@ -42,6 +45,10 @@ class ShoppingPage{
         await elementHelper.eleClick(this.payType)
         await elementHelper.eleClick(this.confirmOrder)
         }
+    async SignOut(){
+        await elementHelper.eleClick(this.logOut)
+        }
+
 
 }
 export default ShoppingPage;

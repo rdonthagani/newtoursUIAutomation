@@ -16,3 +16,6 @@ When(/^by providing user details$/,{timeout:6*50000}, async ()=> {
 
 });
 
+Given(/^user email ID saved in JSON$/, async ()=> {
+    await registrationPage.writeJsonData()
+});

@@ -1,6 +1,11 @@
+
 import {browser, element} from "protractor";
 
 import ElementHelper from "../support/elementHelper";
+const fs=require('file-system')
+const jsonFile=require('jsonfile')
+const _=require('lodash')
+const loginDetails=require('../../testData/loginDetails.json')
 const timeOuts=require('../../testData/timeOuts.json');
 const registration=require('../../testData/registration.json')
 const moment=require('moment')
@@ -9,6 +14,7 @@ const testUserEmailId= "user"+moment().format("DDMMYYYYHHmmss")+"@gmail.com";
 
 
 class Registration{
+
 
     constructor() {
 
@@ -44,8 +50,9 @@ class Registration{
 
     async signInPage(){
       await elementHelper.eleClick(this.signIn)
-      await elementHelper.eleType(this.emailId,testUserEmailId)
+      await elementHelper.eleType(this.emailId,loginDetails.emailID)
       await elementHelper.eleClick(this.createAccount)
+      await elementHelper.waitForElement(timeOuts.Duration.longDuration)
     }
 
     async registrationPage(){
@@ -74,6 +81,22 @@ class Registration{
         await elementHelper.eleClick(this.registerButton)
         await elementHelper.waitForElement(timeOuts.Duration.longDuration)
     }
+    async writeJsonData(){
+      await jsonFile.readFile('../../testData/loginDetails.json',(err)=>{
+            if(err)
+                throw err
+            var jsonData=require('../../testData/loginDetails.json')
+            _.set(jsonData,'emailID',testUserEmailId)
+             fs.writeFile('../../testData/loginDetails.json',JSON.stringify(jsonData,null,2),"utf8",(err)=>{
+                if(err)
+                    throw err
+                console.log('file updated')
+            })
+
+        })
+
+    }
 
 }
 export default Registration
+
