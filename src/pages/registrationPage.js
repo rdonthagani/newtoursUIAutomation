@@ -82,19 +82,13 @@ class Registration{
         await elementHelper.waitForElement(timeOuts.Duration.longDuration)
     }
     async writeJsonData(){
-      await jsonFile.readFile('../../testData/loginDetails.json',(err)=>{
-            if(err)
-                throw err
             var jsonData=require('../../testData/loginDetails.json')
-            _.set(jsonData,'emailID',testUserEmailId)
-             fs.writeFile('../../testData/loginDetails.json',JSON.stringify(jsonData,null,2),"utf8",(err)=>{
+           await _.set(jsonData,'emailID',testUserEmailId)
+           await  fs.writeFile('./testData/loginDetails.json',JSON.stringify(jsonData,null,2),"utf8",(err)=>{
                 if(err)
                     throw err
                 console.log('file updated')
             })
-
-        })
-
     }
 
 }

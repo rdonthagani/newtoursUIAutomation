@@ -1,5 +1,6 @@
 import {browser, element} from "protractor";
 import ElementHelper from "../support/elementHelper";
+const loginDetails=require('../../testData/loginDetails.json')
 const timeOuts=require('../../testData/timeOuts.json');
 const elementHelper = new ElementHelper()
 
@@ -17,8 +18,8 @@ class LogInpage{
     }
     async logIn(){
         await elementHelper.eleClick(this.signIn)
-        await elementHelper.eleType(this.emailAdress,'demouser456@gmail.com')
-        await elementHelper.eleType(this.password,'user123')
+        await elementHelper.eleType(this.emailAdress,loginDetails.emailID)
+        await elementHelper.eleType(this.password,loginDetails.password)
         await elementHelper.eleClick(this.signInButton)
     }
 
@@ -30,9 +31,6 @@ class LogInpage{
         await elementHelper.waitForElement(timeOuts.Duration.longDuration)
 
     }
-
-
-
 
 }
 export default LogInpage;

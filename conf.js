@@ -40,8 +40,8 @@ exports.config = {
   // protractor is called.
   //specs: ['example
   suites: {
-   // regression:['./features/regression/signInwithoutRegister.feature'],
-    regression:['./features/regression/endToEndscenario.feature']
+   regression:['./features/regression/signInwithoutRegister.feature'],
+   // regression:['./features/regression']
   },
 
   // reporting plugins
