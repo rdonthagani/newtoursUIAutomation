@@ -31,7 +31,7 @@
     "file-system": "^2.2.2",
     "jsonfile": "^6.0.1",
     "lodash": "^4.17.19",
-    "moment": "^2.27.0",
+    "moment": "^2.29.4",
     "multiple-cucumber-html-reporter": "^1.16.3",
     "protractor": "^7.0.0",
     "protractor-cucumber-framework": "^6.2.1",
